@@ -1,5 +1,5 @@
 "use client";
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useRef } from "react";
 import {
   GoogleMap,
   useJsApiLoader,
@@ -136,9 +136,6 @@ export default function Home() {
     { label: "озон", query: "озон Казань" },
   ];
 
-  if (loadError) {
-    return <div>Map cannot be loaded right now, sorry.</div>;
-  }
   const handleMarkerClick = useCallback(
     (marker) => {
       if (map) {
@@ -148,6 +145,9 @@ export default function Home() {
     },
     [map]
   );
+  if (loadError) {
+    return <div>Map cannot be loaded right now, sorry.</div>;
+  }
   return (
     <div className="relative w-screen h-screen">
       <div className="absolute top-0 left-0 right-0 px-4 py-2 flex justify-between items-center opacity-95 bg-white z-10">
