@@ -26,7 +26,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/page.jsx"
+    "app/admin/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
