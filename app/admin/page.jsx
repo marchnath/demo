@@ -1,11 +1,6 @@
 "use client";
 import { useState, useCallback, useRef } from "react";
-import {
-  GoogleMap,
-  useJsApiLoader,
-  Marker,
-  Data,
-} from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import RiskSelect from "./riskSelect";
 import AddButton from "./addButton";
 
@@ -27,17 +22,15 @@ const center = {
 const libraries = ["places"];
 
 export default function Home() {
-  const [map, setMap] = useState(null);
   const geocoderRef = useRef(null);
   const placesServiceRef = useRef(null);
 
-  const { isLoaded, loadError } = useJsApiLoader({
+  const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
     libraries,
   });
 
   const onLoad = useCallback((map) => {
-    setMap(map);
     geocoderRef.current = new window.google.maps.Geocoder();
     placesServiceRef.current = new window.google.maps.places.PlacesService(map);
   }, []);

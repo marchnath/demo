@@ -30,7 +30,7 @@ export default function MapRegions() {
         map.data.addGeoJson(worldData);
 
         // Style the regions
-        map.data.setStyle((feature) => {
+        map.data.setStyle(() => {
           const riskLevel = Math.random();
 
           return {

@@ -7,7 +7,7 @@ import DetailsPopup from "./detailsPopup";
 const MapMarkers = () => {
   const [showMarkers, setShowMarkers] = useState(false);
   const [selectedMarker, setSelectedMarker] = useState(null);
-  const [hoveredMarker, setHoveredMarker] = useState(null);
+
   const [showDetailsPopup, setShowDetailsPopup] = useState(false);
   const [detailsItem, setDetailsItem] = useState(null);
 
@@ -36,10 +36,6 @@ const MapMarkers = () => {
       <path d="M24 11.5l4.5 4.5-9 9L15 20.5zM16 20l-3 3-2-2 3-3zm11-9l2 2-3 3-2-2z" fill="white"/>
     </svg>
   `;
-
-  const handleMarkerMouseOver = (markerData, type) => {
-    setHoveredMarker({ type, data: markerData });
-  };
 
   const handleMarkerClick = (markerData, type) => {
     setSelectedMarker({ type, data: markerData });
