@@ -19,7 +19,7 @@ const riskList = [
   "Вспышки заболеваний",
 ];
 
-const calculateProbabilityLevels = (item) => {
+const calculateProbabilityLevels = () => {
   const levels = {};
   riskList.forEach((risk) => {
     // Simple logic to assign probability levels based on item data

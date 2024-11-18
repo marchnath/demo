@@ -1,9 +1,6 @@
 // ColorLegend.jsx
 
-import { useRisk } from "./riskContext";
 export default function ColorLegend() {
-  const { selectedRisks, riskLevels } = useRisk();
-
   const colors = {
     low: "#ffeda0",
     medium: "#feb24c",
