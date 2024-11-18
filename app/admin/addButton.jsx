@@ -22,10 +22,10 @@ import { FaPlus } from "react-icons/fa6";
 export default function AddButton() {
   const [formType, setFormType] = useState(null);
   const [formData, setFormData] = useState([{}]);
-  const [savedData, setSavedData] = useState({
-    Organisation: [],
-    Facility: [],
-  });
+  // const [savedData, setSavedData] = useState({
+  //   Organisation: [],
+  //   Facility: [],
+  // });
 
   const openForm = (type) => {
     setFormType(type);
@@ -55,11 +55,11 @@ export default function AddButton() {
   };
 
   const saveData = () => {
-    const validData = formData.filter((row) => Object.keys(row).length > 0);
-    setSavedData((prev) => ({
-      ...prev,
-      [formType]: [...prev[formType], ...validData],
-    }));
+    // const validData = formData.filter((row) => Object.keys(row).length > 0);
+    // setSavedData((prev) => ({
+    //   ...prev,
+    //   [formType]: [...prev[formType], ...validData],
+    // }));
     closeForm();
   };
 
