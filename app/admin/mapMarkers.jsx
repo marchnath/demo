@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Marker, InfoWindow } from "@react-google-maps/api";
 import { sampleOrganisationData, sampleFacilityData } from "./data";
-import DetailsPopup from "./DetailsPopup";
+import DetailsPopup from "./detailsPopup";
 
 const MapMarkers = () => {
   const [showMarkers, setShowMarkers] = useState(false);
