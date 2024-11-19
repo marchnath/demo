@@ -80,7 +80,7 @@ const MapMarkers = () => {
               }`}
             ></div>
           </div>
-          <span className="ml-3  font-semibold p-2">Показывать объекты</span>
+          <span className="ml-3  font-semibold p-2">Показать объекты</span>
         </label>
       </div>
 
