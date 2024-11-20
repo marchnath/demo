@@ -76,9 +76,9 @@ import { HiMiniRectangleGroup } from "react-icons/hi2";
 
 export const Icons = ({ index = 0 }) => {
   const icons = [
-    <SiGoogleassistant className="text-red-500" />,
+    <SiGoogleassistant key="assistant" className="text-red-500" />,
 
-    <HiMiniRectangleGroup className="text-yellow-300" />,
+    <HiMiniRectangleGroup key="rectangle" className="text-yellow-300" />,
   ];
 
   const selectedIcon = icons[index % icons.length];
@@ -86,10 +86,10 @@ export const Icons = ({ index = 0 }) => {
   return (
     <div className="text-2xl flex">
       {[...Array(3)].map((_, i) => (
-        <div>
-          {" "}
-          <span key={i}>{selectedIcon}</span>
-          <span key={i + 1}>{selectedIcon}</span>
+        <div key={`container-${i}`}>
+          <span key={`icon1-${i}`}>{selectedIcon}</span>
+
+          <span key={`icon2-${i}`}>{selectedIcon}</span>
         </div>
       ))}
     </div>
