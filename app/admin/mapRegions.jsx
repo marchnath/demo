@@ -26,8 +26,29 @@ export default function MapRegions() {
     )
       .then((response) => response.json())
       .then((worldData) => {
-        // Add features without processing
-        map.data.addGeoJson(worldData);
+        // Filter for Russia and CIS countries
+        const cisCountries = [
+          "Russia",
+          "Kazakhstan",
+          "Turkmenistan",
+          "Uzbekistan",
+          "Kyrgyzstan",
+          "Tajikistan",
+          "Armenia",
+          "Azerbaijan",
+          "Belarus",
+          "Moldova",
+        ];
+
+        const filteredData = {
+          ...worldData,
+          features: worldData.features.filter((feature) =>
+            cisCountries.includes(feature.properties.name)
+          ),
+        };
+
+        // Add filtered features
+        map.data.addGeoJson(filteredData);
 
         // Style the regions
         map.data.setStyle(() => {

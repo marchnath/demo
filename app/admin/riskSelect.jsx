@@ -37,10 +37,14 @@ export default function RiskSelect() {
 
   const handleRiskSelection = (risk) => {
     if (isMultiSelect) {
-      setSelectedRisks((prev) =>
-        prev.includes(risk) ? prev.filter((r) => r !== risk) : [...prev, risk]
+      // Toggle risk in selectedRisks array
+      setSelectedRisks((prevRisks) =>
+        prevRisks.includes(risk)
+          ? prevRisks.filter((r) => r !== risk)
+          : [...prevRisks, risk]
       );
     } else {
+      // Single selection mode
       setSelectedRisks([risk]);
     }
   };
