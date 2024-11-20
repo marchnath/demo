@@ -89,7 +89,7 @@ export const Icons = ({ index = 0 }) => {
         <div>
           {" "}
           <span key={i}>{selectedIcon}</span>
-          <span key={i}>{selectedIcon}</span>
+          <span key={i + 1}>{selectedIcon}</span>
         </div>
       ))}
     </div>

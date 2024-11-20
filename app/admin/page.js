@@ -5,7 +5,6 @@ import { useCallback, useRef } from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import RiskSelect from "./riskSelect";
 import AddButton from "./addButton";
-import Image from "next/image";
 
 import { RiskProvider } from "./riskContext";
 import ColorLegend from "./colorLegend";
@@ -47,7 +46,7 @@ export default function Home() {
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={2.5}
+            zoom={2.8}
             onLoad={onLoad}
           >
             <MapRegions />
