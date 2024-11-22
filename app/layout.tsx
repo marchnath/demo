@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import { RiskProvider } from "./admin/riskContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`h-screen w-screen`}>{children}</body>
+      <RiskProvider>
+        <body className={`h-screen w-screen`}>{children}</body>
+      </RiskProvider>
     </html>
   );
 }

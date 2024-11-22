@@ -1,4 +1,5 @@
 // RiskContext.js
+"use client";
 import { createContext, useState, useContext } from "react";
 
 const RiskContext = createContext();

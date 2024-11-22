@@ -1,0 +1,8 @@
+{
+  "success": false,
+  "error": {
+    "code": "invalid_client",
+    "description": "The client provided is invalid."
+  },
+  "response": []
+}
