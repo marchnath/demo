@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import DeckGL from "@deck.gl/react";
 import { HeatmapLayer } from "@deck.gl/aggregation-layers";
 import { ScatterplotLayer } from "@deck.gl/layers";
 import { ContourLayer } from "@deck.gl/aggregation-layers";
-import { MapViewState, FlyToInterpolator } from "@deck.gl/core";
 
 export function MapAnimations1() {
   const [radius, setRadius] = useState(25);
