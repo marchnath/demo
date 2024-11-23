@@ -42,29 +42,33 @@ const MapMarkers = () => {
   };
 
   const renderInfoWindow = (marker) => (
-    <InfoWindow
-      position={parseCoordinates(marker.data["Location Coordinates"])}
-      onCloseClick={() => setSelectedMarker(null)}
-    >
-      <div className="p-2">
-        <h3 className="font-bold text-lg">{marker.data.Name}</h3>
-        <p className="text-lg">
-          {marker.data["Industry Type"] || marker.data.Type}
-        </p>
-        <button
-          className="text-blue-500 hover:text-blue-700 text-lg mt-2 inline-block"
-          onClick={() => handleSeeDetailsClick(marker.data)}
-        >
-          Подробнее
-        </button>
-      </div>
-    </InfoWindow>
+    <div className="z-50">
+      {" "}
+      <InfoWindow
+        position={parseCoordinates(marker.data["Location Coordinates"])}
+        onCloseClick={() => setSelectedMarker(null)}
+        className="z-50"
+      >
+        <div className="p-2 z-50">
+          <h3 className="font-bold text-lg">{marker.data.Name}</h3>
+          <p className="text-lg">
+            {marker.data["Industry Type"] || marker.data.Type}
+          </p>
+          <button
+            className="text-blue-500 hover:text-blue-700 text-lg mt-2 inline-block"
+            onClick={() => handleSeeDetailsClick(marker.data)}
+          >
+            Подробнее
+          </button>
+        </div>
+      </InfoWindow>
+    </div>
   );
 
   return (
     <>
       {/* Toggle Switch - remains the same */}
-      <div className="absolute bottom-4 left-4 z-10 bg-white rounded-lg p-2 shadow-lg">
+      <div className="absolute bottom-4 left-4 z-10 bg-white opacity-85 rounded-lg p-2 shadow-lg">
         <label className="flex items-center cursor-pointer">
           <div className="relative">
             <input

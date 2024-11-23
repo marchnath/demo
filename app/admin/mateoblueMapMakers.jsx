@@ -58,7 +58,7 @@ const MeteoblueMapMarkers = () => {
   return (
     <div className="absolute inset-0 pointer-events-none">
       {/* Toggle Switch */}
-      <div className="absolute bottom-24 left-20 z-10 bg-white rounded-lg p-2 shadow-lg pointer-events-auto">
+      <div className="absolute bottom-24 left-20 z-10 bg-white opacity-85 rounded-lg p-2 shadow-lg pointer-events-auto">
         <label className="flex items-center cursor-pointer">
           <div className="relative">
             <input
@@ -117,7 +117,7 @@ const MeteoblueMapMarkers = () => {
 
             {/* Info Window */}
             {selectedMarker?.Name === marker.Name && (
-              <div className="absolute z-20 bg-white rounded-lg shadow-lg p-4 w-64 -translate-x-1/2 mt-2">
+              <div className="absolute z-50 bg-white rounded-lg shadow-lg p-4 w-64 -translate-x-1/2 mt-2">
                 <h3 className="font-bold text-lg">{marker.Name}</h3>
                 <p className="text-lg">
                   {marker["Industry Type"] || marker.Type}

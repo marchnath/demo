@@ -50,7 +50,7 @@ export default function RiskSelect() {
   };
 
   return (
-    <div className="w-full z-10 max-w-md mx-auto p-4 space-y-4 fixed left-4 top-20 bg-white opacity-95 rounded-xl">
+    <div className="w-full z-10 max-w-md mx-auto p-4 space-y-4 fixed left-4 top-20 bg-white opacity-80 rounded-xl">
       <div className="flex justify-between items-center mb-4">
         <label className="flex items-center cursor-pointer">
           <span className="mr-2 font-bold">Множественный выбор</span>

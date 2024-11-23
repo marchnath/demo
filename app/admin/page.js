@@ -51,7 +51,7 @@ export default function Home() {
     <div className="w-screen h-screen overflow-hidden">
       <button
         onClick={toggleMap}
-        className="absolute top-2 left-2 z-10 bg-purple-800  text-white font-semibold p-4 rounded-lg"
+        className="absolute top-2 left-2 z-10 bg-purple-800  text-white font-semibold px-4 py-2 rounded-lg"
       >
         {showGoogleMap
           ? "Переключиться на карту погоды"

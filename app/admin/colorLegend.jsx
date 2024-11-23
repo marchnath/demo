@@ -14,7 +14,7 @@ export default function ColorLegend() {
   };
 
   return (
-    <div className="fixed right-4 top-20 bg-white p-4 rounded-xl shadow-lg z-10">
+    <div className="fixed right-4 top-20 bg-white p-4 opacity-80 rounded-xl shadow-lg z-10">
       <h3 className="font-bold mb-2">Уровни риска</h3>
       {Object.entries(colors).map(([level, color]) => (
         <div key={level} className="flex items-center gap-2 mb-1">
