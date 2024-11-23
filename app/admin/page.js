@@ -9,6 +9,7 @@ import AddButton from "./addButton";
 import ColorLegend from "./colorLegend";
 import MapRegions from "./mapRegions";
 import MapObjects from "./mapObjects";
+import MeteoblueMapMarkers from "./mateoblueMapMakers";
 
 import MapMarkers from "./mapMarkers";
 
@@ -71,14 +72,17 @@ export default function Home() {
           </GoogleMap>
         )
       ) : (
-        <iframe
-          src="https://www.meteoblue.com/ru/weather/maps/widget/moscow_russia_524901?cloudsAndPrecipitation=1&windAnimation=1&gust=1&satellite=1&temperature=1&sunshine=1&extremeForecastIndex=1&geoloc=fixed&tempunit=C&windunit=km%252Fh&lengthunit=metric&zoom=2&autowidth=auto"
-          frameBorder="0"
-          scrolling="NO"
-          allowTransparency="true"
-          sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
-          style={{ width: "100%", height: "100vh" }}
-        />
+        <div className="relative w-full h-screen">
+          <iframe
+            src="https://www.meteoblue.com/ru/weather/maps/widget/moscow_russia_524901?cloudsAndPrecipitation=1&windAnimation=1&gust=1&satellite=1&temperature=1&sunshine=1&extremeForecastIndex=1&geoloc=fixed&tempunit=C&windunit=km%252Fh&lengthunit=metric&zoom=2&autowidth=auto"
+            frameBorder="0"
+            scrolling="NO"
+            allowTransparency="true"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+            style={{ width: "100%", height: "100vh" }}
+          />
+          <MeteoblueMapMarkers />
+        </div>
       )}
 
       <RiskSelect className="absolute top-4 left-4 z-10" />

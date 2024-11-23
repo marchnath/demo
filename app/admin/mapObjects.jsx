@@ -19,7 +19,7 @@ export default function Objects() {
     const latMin = 41; // Approximate southern latitude of Russia
     const latMax = 82; // Approximate northern latitude of Russia
     const lngMin = 19; // Approximate western longitude of Russia
-    const lngMax = 190; // Approximate eastern longitude of Russia
+    const lngMax = 170; // Approximate eastern longitude of Russia
 
     // Generate random latitude and longitude within the specified range
     const randomLat = Math.random() * (latMax - latMin) + latMin;
